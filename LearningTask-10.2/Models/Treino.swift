@@ -7,6 +7,29 @@
 
 import Foundation
 
-// Exercicio tem simbolo, nome e descricao
+struct Exercicio {
+    let simbolo: String
+    let nome: String
+    let descricao: String
+}
 
-// Treino tem simbolo, titulo, descricao e exercícios
+struct Treino {
+    let simbolo: String
+    let titulo: String
+    let descricao: String
+    var exercicios: [Exercicio]
+}
+
+extension Treino: Detailable {
+    var symbol: String {
+        return simbolo
+    }
+    
+    var title: String {
+        return titulo
+    }
+    
+    var subtitle: String {
+        return descricao
+    }
+}
